@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script type="text/javascript" src="easy.qrcode.js"></script>
+    </head>
+    <body>
+        <input type="text" id="valor" value="">
+        <button onClick="createQrCode()">Gerar QR Code</button>
+        <div id="qrcode"></div>
+    </body>
+    <script>
+    
+    function createQrCode()
+    {
+    var userInput = document.getElementById('valor').value;
+
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+
+                    
+                        text: userInput,
+                        width: 240,
+                        height: 240,
+
+                        title: "COD:"+userInput,
+                        titleFont: "bold 18px Arial",
+                        titleColor: "#000",
+                        titleBackgroundColor: "#fff",
+                        titleHeight: 40,
+                        titleTop: 25,
+
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+
+
+                
+                    
+    });
+    }
+    
+    </script>
+</html>
